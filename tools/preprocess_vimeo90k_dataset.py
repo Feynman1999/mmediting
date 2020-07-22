@@ -240,12 +240,12 @@ def parse_args():
         description='Preprocess Vimeo90K datasets',
         epilog='You can download the Vimeo90K dataset '
         'from：http://toflow.csail.mit.edu/')
-    parser.add_argument('gt-path', help='GT path for Vimeo90K')
-    parser.add_argument('lq-path', help='LQ path for Vimeo90K')
+    parser.add_argument('gt_path', help='GT path for Vimeo90K')
+    parser.add_argument('lq_path', help='LQ path for Vimeo90K')
     parser.add_argument(
-        'train-list', help='official training list path for Vimeo90K')
+        'train_list', help='official training list path for Vimeo90K')
     parser.add_argument(
-        '--make-lmdb', action='store_true', help='create lmdb files')
+        '--make_lmdb', action='store_true', help='create lmdb files')
     parser.add_argument(
         '--usemy', action='store_true', help='whether to use my(chenyx.cs@gmail.com) dataset')
 
@@ -254,12 +254,7 @@ def parse_args():
     return args
 
 """
-python tools/preprocess_vimeo90k_dataset.py 
---gt-path /opt/data/private/datasets/vimeo_septuplet/train/B
---lq-path /opt/data/private/datasets/vimeo_septuplet/train/A
---train-list none
---make-lmdb
---usemy
+python tools/preprocess_vimeo90k_dataset.py  /opt/data/private/datasets/vimeo_septuplet/train/B  /opt/data/private/datasets/vimeo_septuplet/train/A  none  --make-lmdb  --usemy
 """
 
 if __name__ == '__main__':
